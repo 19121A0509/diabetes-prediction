@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>DITECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(250, 198, 241);
+    }
+    input[type=text], select {
+    margin-right:500px;
+    width: 50%;
+    margin-left:20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+  p{
+        color: rgb(58, 139, 11);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    input:hover{
+        background-color: cyan;
+    }
+    input[type=submit]:hover {
+    background-color: #17cce4;
+    }
+    </style>
+    </head>
+    <body>
+<br>
+    
+    <div class="card card-body container w-80">
+        <form method="post" action="/predict" enctype="multipart/form-data">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-2 text-center card-header" style="background-color: black;color: rgb(247, 243, 243);">Diabetes Prediction</legend>
+            </fieldset>
+
+    <input style="margin-left:300px" type="text" name="Pregnencies" placeholder="pregnencies" required="required"  />
+    <input style="margin-left:300px" type="text" name="Glucose Level" placeholder="Glucose Level" required="required"  />
+     <input style="margin-left:300px" type="text" name="Blood Pressure" placeholder="Blood Pressure" required="required" /> 
+    <input style="margin-left:300px" type="text" name="Skin Thickness" placeholder="Skin Thickness" required="required" />
+    <input style="margin-left:300px" type="text" name="Insulin" placeholder="Insulin" required="required"/>
+    <input style="margin-left:300px" type="text" name="BMI" placeholder="BMI" required="required" />
+    <input  style="margin-left:300px" type="text" name="Diabetes PF" placeholder="Diabetes PF" required="required"/>
+    <input style="margin-left:300px" type="text" name="Age" placeholder="Age" required="required" />
+       
+        <div class="form-group">
+            <button class="btn btn-success" style="margin-left:500px" type="submit">
+                Predict
+            </button>
+        </div>
+    </form>
+    </div>
+    </body>
+</html>
