@@ -2,7 +2,7 @@ import numpy as np
 from flask import Flask, request, render_template
 import pickle
 
-app = Flask(__name__ ,template_folder='template')
+app = Flask(__name__ ,template_folder='templates')
 sc = pickle.load(open('sc.pkl', 'rb'))
 model = pickle.load(open('classifier.pkl', 'rb'))
 
